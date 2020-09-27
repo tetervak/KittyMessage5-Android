@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">Kitty Message 5</string>
-    <!-- menu item -->
+
+    <!-- menu items -->
+    <string name="action_about">About</string>
     <string name="action_settings">Settings</string>
 
     <!-- about dialog -->
     <string name="about">About</string>
-    <string name="author">Alex Tetervak, Sheridan College, 2019</string>
+    <string name="author">Alex Tetervak, Sheridan College, 2020</string>
 
     <!-- radio button labels / output strings -->
     <string name="cat_purr">Purr</string>
@@ -33,6 +35,7 @@
     <string name="input_fragment_label">Input Fragment</string>
     <string name="output_fragment_label">Output Fragment</string>
     <string name="main_activity_label">Main Activity</string>
+    <string name="about_fragment">About Fragment</string>
 
     <!-- settings fragment -->
     <string name="message_text">Message Text</string>

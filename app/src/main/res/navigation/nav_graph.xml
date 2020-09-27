@@ -28,6 +28,12 @@
             app:destination="@id/InputFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"
-            app:popUpTo="@id/InputFragment" />
+            app:popUpTo="@id/InputFragment"
+            app:popUpToInclusive="true" />
     </fragment>
+    <dialog
+        android:id="@+id/AboutFragment"
+        android:name="ca.tetervak.kittymessage5.ui.AboutFragment"
+        android:label="@string/about_fragment" />
+    <action android:id="@+id/to_AboutFragment" app:destination="@id/AboutFragment" />
 </navigation>

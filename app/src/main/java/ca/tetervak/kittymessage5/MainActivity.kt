@@ -6,6 +6,7 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.navigation.Navigation
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,8 +28,16 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
+            R.id.action_about->{
+                navigate(R.id.to_AboutFragment)
+                true
+            }
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun navigate(destination: Int){
+        Navigation.findNavController(this, R.id.nav_host).navigate(destination)
     }
 }
