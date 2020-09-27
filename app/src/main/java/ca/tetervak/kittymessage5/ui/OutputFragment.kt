@@ -39,7 +39,7 @@ class OutputFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.back_button).setOnClickListener {
+        binding.backButton.setOnClickListener {
             findNavController().navigate(R.id.action_OutputFragment_to_InputFragment)
         }
     }

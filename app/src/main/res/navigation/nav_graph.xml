@@ -13,7 +13,9 @@
 
         <action
             android:id="@+id/action_InputFragment_to_OutputFragment"
-            app:destination="@id/OutputFragment" />
+            app:destination="@id/OutputFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/OutputFragment"
@@ -23,6 +25,9 @@
 
         <action
             android:id="@+id/action_OutputFragment_to_InputFragment"
-            app:destination="@id/InputFragment" />
+            app:destination="@id/InputFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/InputFragment" />
     </fragment>
 </navigation>
