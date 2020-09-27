@@ -3,26 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/InputFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="ca.tetervak.kittymessage5.InputFragment"
-        android:label="@string/first_fragment_label"
+        android:id="@+id/InputFragment"
+        android:name="ca.tetervak.kittymessage5.ui.InputFragment"
+        android:label="@string/input_fragment_label"
         tools:layout="@layout/fragment_input">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_InputFragment_to_OutputFragment"
+            app:destination="@id/OutputFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="ca.tetervak.kittymessage5.OutputFragment"
-        android:label="@string/second_fragment_label"
+        android:id="@+id/OutputFragment"
+        android:name="ca.tetervak.kittymessage5.ui.OutputFragment"
+        android:label="@string/output_fragment_label"
         tools:layout="@layout/fragment_output">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_OutputFragment_to_InputFragment"
+            app:destination="@id/InputFragment" />
     </fragment>
 </navigation>
