@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import ca.tetervak.kittymessage5.R
 import ca.tetervak.kittymessage5.databinding.FragmentOutputBinding
@@ -40,7 +39,7 @@ class OutputFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.backButton.setOnClickListener {
-            findNavController().navigate(R.id.action_OutputFragment_to_InputFragment)
+            findNavController().navigate(R.id.action_output_to_input)
         }
     }
 

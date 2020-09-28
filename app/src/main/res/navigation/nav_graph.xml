@@ -8,11 +8,11 @@
     <fragment
         android:id="@+id/InputFragment"
         android:name="ca.tetervak.kittymessage5.ui.InputFragment"
-        android:label="@string/input_fragment_label"
+        android:label="@string/input"
         tools:layout="@layout/fragment_input">
 
         <action
-            android:id="@+id/action_InputFragment_to_OutputFragment"
+            android:id="@+id/action_input_to_output"
             app:destination="@id/OutputFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right" />
@@ -20,11 +20,11 @@
     <fragment
         android:id="@+id/OutputFragment"
         android:name="ca.tetervak.kittymessage5.ui.OutputFragment"
-        android:label="@string/output_fragment_label"
+        android:label="@string/output"
         tools:layout="@layout/fragment_output">
 
         <action
-            android:id="@+id/action_OutputFragment_to_InputFragment"
+            android:id="@+id/action_output_to_input"
             app:destination="@id/InputFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"
@@ -34,6 +34,11 @@
     <dialog
         android:id="@+id/AboutFragment"
         android:name="ca.tetervak.kittymessage5.ui.AboutFragment"
-        android:label="@string/about_fragment" />
-    <action android:id="@+id/to_AboutFragment" app:destination="@id/AboutFragment" />
+        android:label="@string/about" />
+    <action android:id="@+id/action_global_to_about" app:destination="@id/AboutFragment" />
+    <fragment
+        android:id="@+id/SettingsFragment"
+        android:name="ca.tetervak.kittymessage5.ui.SettingsFragment"
+        android:label="@string/settings" />
+    <action android:id="@+id/action_global_to_settings" app:destination="@id/SettingsFragment" />
 </navigation>

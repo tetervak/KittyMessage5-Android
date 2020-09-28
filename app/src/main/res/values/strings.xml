@@ -6,7 +6,6 @@
     <string name="action_settings">Settings</string>
 
     <!-- about dialog -->
-    <string name="about">About</string>
     <string name="author">Alex Tetervak, Sheridan College, 2020</string>
 
     <!-- radio button labels / output strings -->
@@ -37,12 +36,17 @@
     <string name="main_activity_label">Main Activity</string>
     <string name="about_fragment">About Fragment</string>
 
+    <!-- fragment labels for the toolbar -->
+    <string name="input">Input</string>
+    <string name="output">Output</string>
+    <string name="about">About</string>
+    <string name="settings">Settings</string>
+
     <!-- settings fragment -->
     <string name="message_text">Message Text</string>
     <string name="delivery_speed">Delivery Speed</string>
     <string name="default_message_title">Default Message</string>
     <string name="urgent_key">urgent</string>
     <string name="message_text_key">message_text</string>
-    <string name="default_message_value">purr</string>
-
+    <string name="default_message_value">mew</string>
 </resources>
