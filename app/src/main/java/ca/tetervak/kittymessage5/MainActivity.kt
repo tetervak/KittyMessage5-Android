@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 
@@ -22,9 +23,6 @@ class MainActivity : AppCompatActivity() {
             Navigation.findNavController(this, R.id.nav_host)
         val appBarConfiguration = AppBarConfiguration(navController.graph)
         toolbar.setupWithNavController(navController, appBarConfiguration)
-
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -51,6 +49,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun navigate(action: Int){
-        Navigation.findNavController(this, R.id.nav_host).navigate(action)
+        findNavController(R.id.nav_host).navigate(action)
     }
 }
