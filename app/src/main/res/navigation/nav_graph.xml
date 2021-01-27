@@ -30,10 +30,18 @@
             app:exitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/InputFragment"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="envelope"
+            app:argType="ca.tetervak.kittymessage5.domain.Envelope" />
     </fragment>
     <dialog
         android:id="@+id/AboutFragment"
         android:name="ca.tetervak.kittymessage5.ui.AboutFragment"
         android:label="@string/about" />
     <action android:id="@+id/action_global_to_about" app:destination="@id/AboutFragment" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="ca.tetervak.kittymessage5.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
 </navigation>

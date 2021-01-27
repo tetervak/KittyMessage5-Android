@@ -10,7 +10,6 @@ import androidx.navigation.fragment.findNavController
 import ca.tetervak.kittymessage5.R
 import ca.tetervak.kittymessage5.databinding.FragmentInputBinding
 import ca.tetervak.kittymessage5.domain.Envelope
-import ca.tetervak.kittymessage5.ui.OutputFragment.Companion.ENVELOPE
 
 class InputFragment : Fragment() {
 
@@ -46,9 +45,9 @@ class InputFragment : Fragment() {
             R.id.hiss_button -> getString(R.string.cat_hiss)
             else -> getString(R.string.undefined)
         }
-        val arguments = Bundle()
-        arguments.putSerializable(ENVELOPE, Envelope(isUrgent, textMessage))
-        navController.navigate(R.id.action_input_to_output, arguments)
+
+        val action = InputFragmentDirections.actionInputToOutput(Envelope(isUrgent, textMessage))
+        navController.navigate(action)
     }
 
     override fun onDestroyView() {
