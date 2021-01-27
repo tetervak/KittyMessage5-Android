@@ -36,9 +36,4 @@
         android:name="ca.tetervak.kittymessage5.ui.AboutFragment"
         android:label="@string/about" />
     <action android:id="@+id/action_global_to_about" app:destination="@id/AboutFragment" />
-    <fragment
-        android:id="@+id/SettingsFragment"
-        android:name="ca.tetervak.kittymessage5.ui.SettingsFragment"
-        android:label="@string/settings" />
-    <action android:id="@+id/action_global_to_settings" app:destination="@id/SettingsFragment" />
 </navigation>

@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import ca.tetervak.kittymessage5.R
 import ca.tetervak.kittymessage5.databinding.FragmentOutputBinding
-import ca.tetervak.kittymessage5.model.Envelope
+import ca.tetervak.kittymessage5.domain.Envelope
 
 class OutputFragment : Fragment() {
 
@@ -24,7 +24,7 @@ class OutputFragment : Fragment() {
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentOutputBinding.inflate(inflater, container, false)
 

@@ -40,10 +40,6 @@ class MainActivity : AppCompatActivity() {
                 navigate(R.id.action_global_to_about)
                 true
             }
-            R.id.action_settings->{
-                navigate(R.id.action_global_to_settings)
-                true
-            }
             else -> super.onOptionsItemSelected(item)
         }
     }

@@ -1,4 +1,4 @@
-package ca.tetervak.kittymessage5.model
+package ca.tetervak.kittymessage5.domain
 
 import java.io.Serializable
 
