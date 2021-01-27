@@ -19,7 +19,7 @@ class OutputFragment : Fragment() {
     private var _binding: FragmentOutputBinding? = null
     private val binding get() = _binding!!
 
-    private var envelope: Envelope? = null
+    private lateinit var envelope: Envelope
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -27,11 +27,8 @@ class OutputFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         _binding = FragmentOutputBinding.inflate(inflater, container, false)
-
-        envelope = arguments?.getSerializable(ENVELOPE) as Envelope?
-
+        envelope = arguments?.getSerializable(ENVELOPE) as Envelope
         showEnvelope()
-
         return binding.root
     }
 
@@ -44,16 +41,17 @@ class OutputFragment : Fragment() {
     }
 
     private fun showEnvelope(){
-
         binding.isUrgentOutput.text =
-            when{
-                (envelope?.isUrgent == true) -> getString(R.string.urgent)
-                (envelope?.isUrgent == false) -> getString(R.string.not_urgent)
-                else -> getString(R.string.undefined)
+            if (envelope.isUrgent) {
+                getString(R.string.urgent)
+            } else {
+                getString(R.string.not_urgent)
             }
+        binding.messageText.text = envelope.textMessage
+    }
 
-        binding.messageText.text =
-            envelope?.textMessage ?: getString(R.string.undefined)
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

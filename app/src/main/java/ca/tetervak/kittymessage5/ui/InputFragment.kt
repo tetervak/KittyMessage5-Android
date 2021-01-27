@@ -51,4 +51,8 @@ class InputFragment : Fragment() {
         navController.navigate(R.id.action_input_to_output, arguments)
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

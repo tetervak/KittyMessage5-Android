@@ -14,14 +14,11 @@ import ca.tetervak.kittymessage5.R
 class AboutFragment : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        return activity?.let {
-            // Use the Builder class for convenient dialog construction
-            val builder = AlertDialog.Builder(it)
+            val builder = AlertDialog.Builder(requireContext())
             builder
                 .setTitle(R.string.app_name)
                 .setMessage(R.string.author)
                 .setPositiveButton(android.R.string.ok,null)
-                .create()
-        } ?: throw IllegalStateException("Activity cannot be null")
+            return builder.create()
     }
 }
